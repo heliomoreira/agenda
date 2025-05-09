@@ -73,6 +73,19 @@
                         <div data-i18n="Page 2">Clientes</div>
                     </a>
                 </li>
+                <li class="menu-header small">
+                    <span class="menu-header-text" data-i18n="Painel de Gestão">Painel de Gestão</span>
+                </li>
+
+                <li class="menu-header small">
+                    <span class="menu-header-text" data-i18n="Painel de Gestão">Admin</span>
+                </li>
+                <li class="menu-item">
+                    <a href="/customers" class="menu-link">
+                        <i class="menu-icon icon-base ti tabler-settings"></i>
+                        <div data-i18n="Page 2">Configurações</div>
+                    </a>
+                </li>
             </ul>
         </aside>
 
