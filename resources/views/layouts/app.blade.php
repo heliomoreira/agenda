@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Title</title>
+    <title>Agenda Online</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{asset('theme/assets/img/favicon/favicon.ico')}}" />
@@ -48,7 +48,7 @@
         <aside id="layout-menu" class="layout-menu menu-vertical menu" data-bs-theme="dark" >
             <div class="app-brand demo">
                 <a href="/" class="app-brand-link">
-                    <span class="app-brand-text demo menu-text fw-bold ms-3">Agenda Online</span>
+                    <span class="app-brand-text menu-text fw-bold ms-3" style="font-size: 20px">Agenda Online</span>
                 </a>
 
                 <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">

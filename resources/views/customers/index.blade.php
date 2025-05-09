@@ -25,10 +25,10 @@
                     <tr>
                         <td>
                             <i class="icon-base ti tabler-user icon-md me-4"></i>
-                            <span class="fw-medium">{{$customer->name}}</span>
+                            <span class="fw-medium"><a href="/customers/edit/{{$customer->id}}">{{$customer->name}}</a></span>
                         </td>
-                        <td>{{$customer->email}}</td>
-                        <td>{{$customer->phone}}</td>
+                        <td><a href="/customers/edit/{{$customer->id}}">{{$customer->email}}</a></td>
+                        <td><a href="/customers/edit/{{$customer->id}}">{{$customer->phone}}</a></td>
                         <td><span class="badge bg-label-primary me-1">Active</span></td>
                     </tr>
                     @endforeach
