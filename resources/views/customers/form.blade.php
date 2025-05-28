@@ -6,22 +6,26 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-3">
-                        <form action="/customers/store" method="POST">
-                            @csrf
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="name" name="name" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="phone" class="form-label">Contacto</label>
-                                <input type="text" class="form-control" id="phone" name="phone" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Guardar</button>
-                        </form>
+                        @if(!$customer->id)
+                            {{ html()->modelForm($customer, 'POST', route('customers.store'))->open() }}
+                        @else
+                            {{ html()->modelForm($customer, 'PUT', route('customers.update', $customer->id))->open() }}
+                        @endif
+                        {{ html()->token() }}
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            {{html()->text('name')->class('form-control')->id('name')->required()}}
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            {{html()->email('email')->class('form-control')->id('email')->required()}}
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Contacto</label>
+                            {{html()->text('phone')->class('form-control')->id('phone')->required()}}
+                        </div>
+                        {{html()->submit('Guardar')->class('btn btn-primary')->id('submit')}}
+                        {{html()->closeModelForm()}}
                     </div>
                 </div>
             </div>

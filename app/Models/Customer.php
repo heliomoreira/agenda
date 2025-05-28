@@ -13,6 +13,6 @@ class Customer extends Model
         'address',
         'city',
         'state',
-        'postal_code',
+        'zip_code',
     ];
 }

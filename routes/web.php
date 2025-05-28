@@ -7,5 +7,7 @@ use App\Http\Controllers\CustomersController;
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
 
 Route::get('/customers', [CustomersController::class, 'index'])->name('customers.index');
-Route::get('/customers/form', [CustomersController::class, 'form'])->name('customers.form');
+Route::any('/customers/form', [CustomersController::class, 'form'])->name('customers.form');
 Route::post('/customers/store', [CustomersController::class, 'store'])->name('customers.store');
+Route::get('/customers/edit/{id}', [CustomersController::class, 'edit'])->name('customers.edit');
+Route::put('/customers/update/{id}', [CustomersController::class, 'update'])->name('customers.update');

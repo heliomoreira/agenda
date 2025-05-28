@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->string('email');
             $table->string('phone')->nullable();
             $table->string('address')->nullable();
-            $table->string('postal_code')->nullable();
+            $table->string('zip_code')->nullable();
             $table->string('city')->nullable();
             $table->text('obs')->nullable();
             $table->timestamps();
